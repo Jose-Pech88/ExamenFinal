@@ -1,0 +1,14 @@
+C:\Users\jose.pech\source\repos\AliExpress\AliExpress\obj\Debug\AliExpress.csprojAssemblyReference.cache
+C:\Users\jose.pech\source\repos\AliExpress\AliExpress\bin\Debug\AliExpress.exe.config
+C:\Users\jose.pech\source\repos\AliExpress\AliExpress\bin\Debug\AliExpress.exe
+C:\Users\jose.pech\source\repos\AliExpress\AliExpress\bin\Debug\AliExpress.pdb
+C:\Users\jose.pech\source\repos\AliExpress\AliExpress\obj\Debug\AliExpress.exe
+C:\Users\jose.pech\source\repos\AliExpress\AliExpress\obj\Debug\AliExpress.pdb
+C:\Users\jose.pech\source\repos\AliExpress\AliExpress\bin\Debug\AppData\Paquetes.csv
+C:\Users\jose.pech\Documents\GitHub\ExamenFinal\AliExpress\AliExpress\bin\Debug\AppData\Paquetes.csv
+C:\Users\jose.pech\Documents\GitHub\ExamenFinal\AliExpress\AliExpress\bin\Debug\AliExpress.exe.config
+C:\Users\jose.pech\Documents\GitHub\ExamenFinal\AliExpress\AliExpress\bin\Debug\AliExpress.exe
+C:\Users\jose.pech\Documents\GitHub\ExamenFinal\AliExpress\AliExpress\bin\Debug\AliExpress.pdb
+C:\Users\jose.pech\Documents\GitHub\ExamenFinal\AliExpress\AliExpress\obj\Debug\AliExpress.csprojAssemblyReference.cache
+C:\Users\jose.pech\Documents\GitHub\ExamenFinal\AliExpress\AliExpress\obj\Debug\AliExpress.exe
+C:\Users\jose.pech\Documents\GitHub\ExamenFinal\AliExpress\AliExpress\obj\Debug\AliExpress.pdb

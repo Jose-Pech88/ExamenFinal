@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F928F5CC-3727-4A87-ADBA-15C47C27D06E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>AliExpress</RootNamespace>
+    <AssemblyName>AliExpress</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data.Entities\DTO\PaqueteCostoMenor.cs" />
+    <Compile Include="Data.Entities\DTO\PaqueteEnviado.cs" />
+    <Compile Include="Data.Entities\Interfaces\IPaqueteCostoMenor.cs" />
+    <Compile Include="Data.Entities\Interfaces\IPaqueteEnviado.cs" />
+    <Compile Include="Data.Entities\Interfaces\IRecuperadorConfiguracionTransportista.cs" />
+    <Compile Include="Data.Entities\RecuperadorConfiguracionTransportista.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\CompletadorDatosDTO.cs" />
+    <Compile Include="Services\Strategy\PaqueteriaDHLStrategy.cs" />
+    <Compile Include="Services\EnlistadorPaqueteriasDisponibles.cs" />
+    <Compile Include="Services\Strategy\PaqueteriaEstafetaStrategy.cs" />
+    <Compile Include="Services\Factory\Interfaces\IRecuperadorTransportistas.cs" />
+    <Compile Include="Services\Factory\RecuperadorTransportistaFactory.cs" />
+    <Compile Include="Services\Strategy\PaqueteriaFedexStrategy.cs" />
+    <Compile Include="Services\EvaluadorFechaAnterior.cs" />
+    <Compile Include="Services\GeneradorMensajes.cs" />
+    <Compile Include="Services\Interfaces\ICompletadorDatosDTO.cs" />
+    <Compile Include="Services\Interfaces\IEnlistadorPaqueteriaDisponibles.cs" />
+    <Compile Include="Services\Interfaces\IEvaluadorFechaAnterior.cs" />
+    <Compile Include="Services\Interfaces\IGeneradorMensajes.cs" />
+    <Compile Include="Services\Interfaces\IObtenedorCostoEnvioMenor.cs" />
+    <Compile Include="Services\Interfaces\IObtenedorDatosArchivo.cs" />
+    <Compile Include="Services\Interfaces\IObtenedorMensajePaquetes.cs" />
+    <Compile Include="Services\Interfaces\IObtenedorTiempo.cs" />
+    <Compile Include="Services\Interfaces\IRecuperadorExpressionTiempo.cs" />
+    <Compile Include="Services\Interfaces\IRecuperadorListaPaquetes.cs" />
+    <Compile Include="Services\MedioTransporteTren.cs" />
+    <Compile Include="Services\MedioTransporteBarco.cs" />
+    <Compile Include="Services\Interfaces\ITransportistas.cs" />
+    <Compile Include="Services\MedioTransporteAvion.cs" />
+    <Compile Include="Services\Factory\Interfaces\IRecuperadorMedioTransporte.cs" />
+    <Compile Include="Services\Interfaces\IAdministradorMediosTransporteStrategy.cs" />
+    <Compile Include="Services\Interfaces\IMediosTransportes.cs" />
+    <Compile Include="Services\ObtenedorCostoEnvioMenor.cs" />
+    <Compile Include="Services\ObtenedorDatosArchivo.cs" />
+    <Compile Include="Services\ObtenedorMensajePaquetes.cs" />
+    <Compile Include="Services\ObtenedorTiempo.cs" />
+    <Compile Include="Services\RecuperadorExpressionTiempo.cs" />
+    <Compile Include="Services\RecuperadorListaPaquetes.cs" />
+    <Compile Include="Services\Strategy\Interfaces\IAdministradorTransportistas.cs" />
+    <Compile Include="Services\ValidadorDia.cs" />
+    <Compile Include="Services\ValidadorHora.cs" />
+    <Compile Include="Services\ValidadorMes.cs" />
+    <Compile Include="Services\ValidadorMinuto.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AppData\Paquetes.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
